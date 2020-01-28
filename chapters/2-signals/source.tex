@@ -1,10 +1,12 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
 \begin{document}
 The motivation of the study of signals and systems is to analyze properties that change over time. 
-For example, a spring may bounce up and down and we can observe how its vertical position changes over time. 
-In more mathematical language, at any given time $t$, we can measure the position of the spring and call this position $x(t)$.
-We call these properties which change over time, signals.
+For example, from introductory physics we know that the speed of an object and force it feels will change with time when attached to a perturbed spring.
+Later in this chapter, when we mathematically define what a signal is, stop and ask yourself whether our definition captures our intent to describe properties such as these.
 
 In addition to signals themselves we may be interested in how one signal affects another signal. 
 In the spring for example, both its restoring force and its length will change over time.
@@ -14,8 +16,16 @@ As an analogue, when we apply a function to a number we get another number and t
 In a similar vein, when we apply a system to a signal we get another signal. 
 To analyze the relationship between two signals, we can view one as the input to a system and the other as an output.
 
-Before we get into a more mathematical definition of what we've explored thus far, let us take a moment to examine some of the subtleties of the above discussion. 
-Firstly, a signal was defined as any property where given a time $t$, we can measure the value of the property $x(t)$.
-What are appropriate values of $t$?
-In practice, we allow $t$ to take any real value from $-\infty$ to $\infty$.
+To mathematically define what a signal is, I will first present three definitions that capture a portion of our intent above. 
+After this, I'll show that these three definitions can be reduced into just one definition. 
+
+As mentioned above, we know that the speed of an object and the force it experiences will change with time when attached to a spring. 
+An important subtlety not entirely captured above is whether we are measuring these quantities or modelling them.
+If we are modelling a property, it may make sense to specify its value at one particular time and then predict its value for the rest of eternity after that point as it remains unperturbed.
+In the world of measurement however, any period of measurement must have a beginning and an end and it would make little sense to allow a signal to take a value for any time $t$.
+
+To handle the first case, we define a signal as a function mapping the interval $[0,\infty)$ to a set of complex numbers. 
+Why complex numbers?
+In this case, the complex numbers have the ability to capture all of our intention by restricting ourselves to $\mathbb{R} \subset \mathbb{C}$ while allowing us greater flexability.  
+
 \end{document}
